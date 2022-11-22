@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/showDogs.css" />
+    <title>Dogs</title>
+</head>
+<body>
+    <div id="title">
+    <h1>Dogs Index</h1>
+    </div>
+    <ul>
+        <% for (let dog of dogs) { %>
+            <li class="db-object">
+                <figure>
+                <div>
+                    <a href="/dogs/<%= dog._id %>">
+                    
+                        <img src="<%= dog.img %>" alt="<%= dog.name %>" height="200" width="200">
+                    </a>
+                </div>
+                <div class="img-with-text">
+                <div>
+                <figcaption>
+                    <p>
+                    Name: <%= dog.name %>
+                    </p>
+                    </ p>
+                    Breed: <%=dog.breed %>
+                    </p>
+                    </p>
+                    Gender: <%=dog.gender %>
+                    </p>
+            </li>
+            </figcaption>
+                </figure>
+            </div>
+            <% } %>
+        </ul>
+    </body>
+    </html>

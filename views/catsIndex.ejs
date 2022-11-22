@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/showCats.css" />
+    <title>Cats</title>
+</head>
+<body>
+    <div id="title">
+    <h1>Cats Index</h1>
+    </div>
+    <ul>
+    <% for (let cat of cats) { %>
+        <li class="db-object">
+            <figure>
+            <div>
+                <a href="/cats/<%= cat._id %>">
+                
+                    <img src="<%= cat.img %>" alt="<%= cat.name %>" height="200" width="200">
+                </a>
+            </div>
+            <div class="img-with-text">
+            <div>
+            <figcaption>
+                <p>
+                Name: <%= cat.name %>
+                </p>
+                </ p>
+                Breed: <%=cat.breed %>
+                </p>
+                </p>
+                Gender: <%=cat.gender %>
+                </p>
+        </li>
+        </figcaption>
+            </figure>
+        </div>
+        <% } %>
+    </ul>
+</body>
+</html>

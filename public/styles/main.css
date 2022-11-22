@@ -1,0 +1,23 @@
+body {
+    background-color: rgb(171, 131, 217);
+    margin-top: 60px;
+}
+h1 {
+    text-align: center;
+}
+body h3 {
+    position: absolute;
+}
+ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+li {
+    background-color: #D8CACA;
+    width: 400px;
+    height: 400px;
+    text-align: center;
+    border-radius: 20px;
+    list-style: none;
+}

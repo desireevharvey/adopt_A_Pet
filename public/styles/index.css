@@ -1,0 +1,33 @@
+
+
+.cats {
+    flex-direction:row;
+    display:inline-flex;
+    gap: 5px;
+    text-align: center;
+    
+    }
+
+.dogs {
+    flex-direction:row;
+    display:inline-flex;
+    gap: 5px;
+    text-align: center;
+    
+    }
+
+ .img-with-text {
+        text-align: justify;
+        width: 200;
+        
+    }
+    
+.img-with-text img {
+        display: block;
+        margin: 0 auto;
+    }
+
+
+#title {
+    text-align: center;
+}
