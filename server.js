@@ -4,6 +4,7 @@
 const express = require('express')
 const app = express()
 const port = 3000
+const methodOverride = require('method-override')
 // access models
 const db = require('./models')
 // access controllers
@@ -25,6 +26,7 @@ app.use((req, res, next) => {
     console.log('I run for all routes');
     next();
 });
+app.use(methodOverride('_method'))
 
 
 

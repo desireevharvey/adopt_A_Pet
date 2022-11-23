@@ -11,28 +11,42 @@
         <%=cat.name %>
     </h1>
     <div class="show-items" id="flex-container">
-       
+       <figure>
+        <div>
         <img src="<%=cat.img %>" />
-    <h1>
-        <%=cat.description %>
-            
-            Breed: $<%=cat.breed %>
-    </h1>
+        </div>
+            <div class="img-with-text">
+                <div>
+                <figcaption>
+                    <p>
+                    Name: <%= cat.name %>
+                    </p>
+                    </ p>
+                    Breed: <%=cat.breed %>
+                    </p>
+                    </p>
+                    Gender: <%=cat.gender %>
+                    </p>
+        
+    
+                </figcaption>
+        </div>
+        </div>
+        </figure>
                
 
 
                                 <br />
-                                <form action="/cat/<%= cat._id %>/buy?_method=PUT" method="POST">
-                                    <button type="submit">Adopt</button></form>
-                                <!-- <h4><a href='/product/<%=product._id%>/buy'><button>Buy</button></a></h4> -->
+                              
+                               
+                                <h4><a href='/cats/<%=cat._id%>/edit'><button>Edit</button></a></h4>
 
-                                <!-- <button class="buy">Buy</button> -->
-                                <h4><a href='/cat/<%=cat._id%>/edit'><button>Edit</button></a></h4>
-                                <!-- <h4><a href="#">Edit</a></h4> -->
+                                <form action="/cats/<%= cat._id%>?_method=DELETE" method="POST">
+                                    <button type="submit" class="delete">Adopt</button>
+                                
     </div>
-    <br />
-    <form action="/cat/<%= cat._id%>?_method=DELETE" method="POST">
-    <button type="submit" class="delete">Delete</button>
+    
+  
     </form>
 
     </body>

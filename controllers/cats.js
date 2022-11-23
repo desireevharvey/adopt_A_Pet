@@ -10,7 +10,8 @@ NOTE: Remember that all routes on this page are prefixed with `localhost:3000/lo
 ---------------------------------------------------------------------------------------
 */
 
-router.get('/cats/seed', (req, res) => {
+
+router.get('/seed', (req, res) => {
     db.Cat.deleteMany({}, (err, cats) => {
         if (err) {
             console.log('Error occured in remove', err)
@@ -30,7 +31,9 @@ router.get('/cats/seed', (req, res) => {
     
 })
 
-// get route /cats/
+// I.N.D.U.C.E.S = index, new, delete, update, create, edit, show
+
+// get route /cats/ (index)
 router.get('/', (req, res) => {
     db.Cat.find({}, (err, cats) => {
         if (err) return console.log(err);
@@ -39,10 +42,24 @@ router.get('/', (req, res) => {
 })
 
 
-// New Route (GET/Read): This route renders a form the user will use to POST (create) a new location
+// New Route
 router.get('/new', (req, res) => {
     res.render('newCat', {
         tabTitle: "Cat Creation"
+    })
+})
+
+//delete (Adopt) route
+router.delete('/:id', (req, res) => {
+    db.Cat.findByIdAndRemove(req.params.id, (err, cat) => {
+        res.redirect("/cats")
+    })
+})
+
+// edit route (update)
+router.put('/:id', (req, res) => {
+    db.Cat.findByIdAndUpdate(req.params.id, req.body, {new:true}, (err, cat) => {
+        res.redirect('/cats/' + cat._id)
     })
 })
 
@@ -54,16 +71,25 @@ router.post('/', (req, res) => {
         req.body.visited = false
     }
     db.Cat.create(req.body, (err, cat) => {
-        res.redirect('/')
+        res.redirect('/cats')
     })
 })
 
-// Show Route (GET/Read): This route will show an individual location document using the URL parameter (which will always be the location document's ID)
+// edit
+router.get('/:id/edit', (req, res) => {
+    db.Cat.findById(req.params.id, (err, cat) => {
+        res.render("editCat", {
+            cat: cat
+        })
+    })
+})
+
+// Show Route 
 router.get('/:id', (req, res) => {
     db.Cat.findById(req.params.id, (err, cat) => {
         res.render("showCat", {
-            cat: cat,
-            tabTitle: "Cat: " + cat.name
+            cat: cat
+            // tabTitle: "Cat: " + cat.name
         })
     })
 })

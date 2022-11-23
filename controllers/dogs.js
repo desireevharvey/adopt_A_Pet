@@ -10,7 +10,8 @@ NOTE: Remember that all routes on this page are prefixed with `localhost:3000/lo
 ---------------------------------------------------------------------------------------
 */
 
-router.get('/dogs/seed', (req, res) => {
+
+router.get('/seed', (req, res) => {
     db.Dog.deleteMany({}, (err, dogs) => {
         if (err) {
             console.log('Error occured in remove', err)
@@ -30,7 +31,9 @@ router.get('/dogs/seed', (req, res) => {
     
 })
 
-// get route /cats/
+// I.N.D.U.C.E.S = index, new, delete, update, create, edit, show
+
+// get route /dogs/ (index)
 router.get('/', (req, res) => {
     db.Dog.find({}, (err, dogs) => {
         if (err) return console.log(err);
@@ -38,10 +41,25 @@ router.get('/', (req, res) => {
     })
 })
 
-// New Route (GET/Read): This route renders a form the user will use to POST (create) a new location
+
+// New Route
 router.get('/new', (req, res) => {
     res.render('newDog', {
         tabTitle: "Dog Creation"
+    })
+})
+
+//delete (Adopt) route
+router.delete('/:id', (req, res) => {
+    db.Dog.findByIdAndRemove(req.params.id, (err, dog) => {
+        res.redirect("/dogs")
+    })
+})
+
+// edit route (update)
+router.put('/:id', (req, res) => {
+    db.Dog.findByIdAndUpdate(req.params.id, req.body, {new:true}, (err, dog) => {
+        res.redirect('/dogs/' + dog._id)
     })
 })
 
@@ -53,16 +71,25 @@ router.post('/', (req, res) => {
         req.body.visited = false
     }
     db.Dog.create(req.body, (err, dog) => {
-        res.redirect('/')
+        res.redirect('/dogs')
     })
 })
 
-// Show Route (GET/Read): This route will show an individual location document using the URL parameter (which will always be the location document's ID)
+// edit
+router.get('/:id/edit', (req, res) => {
+    db.Dog.findById(req.params.id, (err, dog) => {
+        res.render("editDog", {
+            dog: dog
+        })
+    })
+})
+
+// Show Route 
 router.get('/:id', (req, res) => {
     db.Dog.findById(req.params.id, (err, dog) => {
         res.render("showDog", {
-            dog: dog,
-            tabTitle: "Dog: " + dog.name
+            dog: dog
+            // tabTitle: "Dog: " + dog.name
         })
     })
 })
