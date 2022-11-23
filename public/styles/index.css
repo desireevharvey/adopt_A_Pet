@@ -1,19 +1,17 @@
 
 
 .cats {
-    flex-direction:row;
-    display:inline-flex;
-    gap: 5px;
-    text-align: center;
-    
+    display: flex;
+    justify-content: center;
+    float: left;
+    margin:0 5px 0 5px
     }
 
 .dogs {
-    flex-direction:row;
-    display:inline-flex;
-    gap: 5px;
-    text-align: center;
-    
+    display: flex;
+    justify-content: center;
+    float: right;
+    margin:0 5px 0 5px
     }
 
  .img-with-text {
