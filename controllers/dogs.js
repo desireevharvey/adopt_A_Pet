@@ -4,11 +4,6 @@ const express = require('express')
 const router = express.Router()
 const seedData = require('../models/dogSeed')
 
-/* 
----------------------------------------------------------------------------------------
-NOTE: Remember that all routes on this page are prefixed with `localhost:3000/location`
----------------------------------------------------------------------------------------
-*/
 
 
 router.get('/seed', (req, res) => {

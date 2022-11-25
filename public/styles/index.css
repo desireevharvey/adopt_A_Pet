@@ -1,31 +1,40 @@
+#title {
+    text-align: center;
+    margin-bottom: 50px;
+    margin-top: 25px;
+}
 
+mark {
+    background-color:#0c0000;
+    color: white;
+   }
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 125px;
+}
 
 .cats {
-    display: flex;
-    justify-content: center;
-    float: left;
-    margin:0 5px 0 5px
-    }
+    margin-right: 75px;
+
+}
+
 
 .dogs {
-    display: flex;
-    justify-content: center;
-    float: right;
-    margin:0 5px 0 5px
-    }
+    margin-left: 75px;
+}
 
- .img-with-text {
+
+.img-with-text {
         text-align: justify;
         width: 200;
         
     }
+
     
 .img-with-text img {
         display: block;
-        margin: 0 auto;
     }
 
 
-#title {
-    text-align: center;
-}

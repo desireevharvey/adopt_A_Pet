@@ -1,19 +1,19 @@
 .db-object{
-    flex-direction:row;
-    display:inline-flex;
-    gap: 5px;
-    
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 125px;    
     }
 
  .img-with-text {
-        text-align: justify;
-        width: 200;
+    text-align: left;
+    width: 200;
         
     }
     
 .img-with-text img {
-        display: block;
-        margin: 0 auto;
+    display: inline-block;
+   
     }
 
 #title {
