@@ -4,43 +4,54 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/styles/showCats.css" />
-    <title>Cats</title>
+    <link rel="stylesheet" href="/styles/main.css" />
+    <title>Adopt-A-Pet ♡ | Cats</title>
+
+
 </head>
 <body>
+    
     <div id="title">
-    <h1>Cats</h1>
-    </div>
-    <a href=<%='/' %>>Go back</a>
-    <ul>
-    <% for (let cat of cats) { %>
-        <li class="db-object">
-            <figure>
-            <div>
-                <a href="/cats/<%= cat._id %>">
-                
-                    <img src="<%= cat.img %>" alt="<%= cat.name %>" height="200" width="200">
-                </a>
-            </div>
-            <div class="img-with-text">
-            <div>
-            <figcaption>
-                <p><b>
-                Name:</b> 
-                <%= cat.name %>
-                </p>
-                </ p>
-                <b>Breed:</b> <%=cat.breed %>
-                </p>
-                </p>
-                <b>Gender:</b> <%=cat.gender %>
-                </p>
-        </li>
-        </figcaption>
-            </figure>
+        <h1>Cats</h1>
         </div>
-        <% } %>
-    </ul>
-    <a href="/cats/new">Cat Surrender Form</a>
+        <h3>
+        <a href=<%='/' %>>Home</a>
+        </h3>
+        <ul>
+        <% for (let cat of cats) { %>
+            <li class="db-object">
+                <div class="white-box">
+                <figure>
+                <div>
+                    <a href="/cats/<%= cat._id %>">
+                    
+                        <img src="<%= cat.img %>" alt="<%= cat.name %>" height="200" width="200">
+                    </a>
+                </div>
+                <div class="img-with-text">
+                <div>
+                <figcaption>
+                    <p><b>
+                    Name:</b> 
+                    <%= cat.name %>
+                    </p>
+                    </ p>
+                    <b>Breed:</b> <%=cat.breed %>
+                    </p>
+                    </p>
+                    <b>Gender:</b> <%=cat.gender %>
+                    </p>
+            </li>
+            </figcaption>
+                </figure>
+            </div>
+            <% } %>
+        </ul>
+        </div>
+    
+        <h3>
+        <a href="/cats/new">Cat Surrender Form</a>
+        </h3>
+
 </body>
 </html>

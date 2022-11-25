@@ -1,11 +1,11 @@
 #title {
     text-align: center;
-    margin-bottom: 50px;
-    margin-top: 25px;
+    margin-bottom: 30px;
+    margin-top: 100px;
 }
 
 mark {
-    background-color:#0c0000;
+    background-color:#ddb370;
     color: white;
    }
 
@@ -20,11 +20,19 @@ mark {
 
 }
 
+.cats a :hover {
+    opacity: 0.8;
+
+}
+
 
 .dogs {
     margin-left: 75px;
 }
 
+.dogs a :hover {
+    opacity: 0.8;
+}
 
 .img-with-text {
         text-align: justify;
@@ -38,3 +46,15 @@ mark {
     }
 
 
+    body {
+        background-image: url("https://i.postimg.cc/mggNXXYK/paw-Layout.jpg");
+      }
+
+
+    .white-box {
+        background-color: white;
+        color: black;
+        margin: 100px 200px 50px 200px;
+    }
+
+    /* Start https://www.cursors-4u.com */ * {cursor: url(https://cur.cursors-4u.net/nature/nat-8/nat738.cur), auto !important;} /* End https://www.cursors-4u.com */

@@ -1,21 +1,36 @@
-.db-object{
+
+body {
+    background-image: url("https://i.postimg.cc/mggNXXYK/paw-Layout.jpg");
+  }
+
+
+.white-box {
+    background-color: white;
+    color: black;
+    width: 40%;
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    margin-left: 125px;    
-    }
+    margin-left: 30%; 
+}
+
+
 
  .img-with-text {
     text-align: left;
     width: 200;
-        
-    }
+}
     
 .img-with-text img {
     display: inline-block;
-   
-    }
+}
+
 
 #title {
-    text-align: center;
+        text-align: center;
+        margin-bottom: 30px;
+        margin-top: 50px;
 }
+
+
+/* Start https://www.cursors-4u.com */ * {cursor: url(https://cur.cursors-4u.net/nature/nat-8/nat738.cur), auto !important;} /* End https://www.cursors-4u.com */

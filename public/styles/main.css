@@ -1,23 +1,41 @@
 body {
-    background-color: rgb(254, 253, 252);
-    margin-top: 60px;
+    background-image: url("https://i.postimg.cc/mggNXXYK/paw-Layout.jpg");
 }
-h1 {
+
+
+.white-box {
+    background-color: white;
+    color: black;
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.db-object{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 125px;    
+}
+
+ .img-with-text {
+    text-align: left; 
+}
+    
+.img-with-text img {
+    display: inline-block;
+   
+}
+
+#title {
     text-align: center;
 }
-body h3 {
-    position: absolute;
+
+
+.db-object a :hover {
+    opacity: 0.8;
 }
-ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-li {
-    background-color: #D8CACA;
-    width: 400px;
-    height: 400px;
-    text-align: center;
-    border-radius: 20px;
-    list-style: none;
-}
+
+
+/* Start https://www.cursors-4u.com */ * {cursor: url(https://cur.cursors-4u.net/nature/nat-8/nat738.cur), auto !important;} /* End https://www.cursors-4u.com */

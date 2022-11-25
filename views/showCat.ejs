@@ -1,16 +1,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Product Shop</title>
-    <link rel="stylesheet" href="/styles/main.css" />
+    <title>Adopt-A-Pet ♡ | View</title>
+    <link rel="stylesheet" href="/styles/showCats.css" />
 </head>
 
 <body>
-    <h3><a href="/cats"> Back</a></h3>
+    <h3><a href="/cats">Go Back</a></h3>
+    <div id="title">
     <h1>
         <%=cat.name %>
     </h1>
-    <div class="show-items" id="flex-container">
+    </div>
+    <div class="white-box">
+ 
+    
        <figure>
         <div>
         <img src="<%=cat.img %>" />
@@ -19,32 +23,38 @@
                 <div>
                 <figcaption>
                     <p>
-                    Name: <%= cat.name %>
+                    <b>Name:</b> <%= cat.name %>
                     </p>
                     </ p>
-                    Breed: <%=cat.breed %>
+                    <b>Breed:</b> <%=cat.breed %>
                     </p>
                     </p>
-                    Gender: <%=cat.gender %>
+                    <b>Gender:</b> <%=cat.gender %>
                     </p>
         
     
                 </figcaption>
-        </div>
-        </div>
+                </div>
+            </div>
+
+            <center>
+            <h4><a href='/cats/<%=cat._id%>/edit'><button>Edit</button></a></h4>
+
+            <form action="/cats/<%= cat._id%>?_method=DELETE" method="POST">
+                    <button type="submit" class="delete">Adopt</button>
+            </center>
         </figure>
                
+        
 
+    </div>    
 
-                                <br />
+    <br />
                               
                                
-                                <h4><a href='/cats/<%=cat._id%>/edit'><button>Edit</button></a></h4>
 
-                                <form action="/cats/<%= cat._id%>?_method=DELETE" method="POST">
-                                    <button type="submit" class="delete">Adopt</button>
                                 
-    </div>
+</div>
     
   
     </form>

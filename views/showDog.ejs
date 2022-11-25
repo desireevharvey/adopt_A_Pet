@@ -1,16 +1,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Product Shop</title>
-    <link rel="stylesheet" href="/styles/main.css" />
+    <title>Adopt-A-Pet ♡ | View</title>
+    <link rel="stylesheet" href="/styles/showCats.css" />
 </head>
 
 <body>
-    <h3><a href="/dogs"> Back</a></h3>
+    <h3><a href="/dogs">Go Back</a></h3>
+    <div id="title">
     <h1>
         <%=dog.name %>
     </h1>
-    <div class="show-items" id="flex-container">
+    </div>
+    <div class="white-box">
+
         <figure>
             <div>
             <img src="<%=dog.img %>" width="200" height="200"/>
@@ -19,30 +22,35 @@
                     <div>
                     <figcaption>
                         <p>
-                        Name: <%= dog.name %>
+                        <b>Name:</b> <%= dog.name %>
                         </p>
                         </ p>
-                        Breed: <%=dog.breed %>
+                        <b>Breed:</b> <%=dog.breed %>
                         </p>
                         </p>
-                        Gender: <%=dog.gender %>
+                        <b>Gender:</b> <%=dog.gender %>
                         </p>
             
         
                     </figcaption>
             </div>
             </div>
+            <center>
+            <h4><a href='/dogs/<%=dog._id%>/edit'><button>Edit</button></a></h4>
+    
+            <form action="/dogs/<%= dog._id%>?_method=DELETE" method="POST">
+            <button type="submit" class="delete">Adopt</button>
+            </center>
             </figure>
         
 
+        </div>
+        </ br>
+                       
 
-                                <br />
+                            </div>
+                            
 
-                                <h4><a href='/dogs/<%=dog._id%>/edit'><button>Edit</button></a></h4>
-    </div>
-   
-    <form action="/dogs/<%= dog._id%>?_method=DELETE" method="POST">
-    <button type="submit" class="delete">Adopt</button>
     </form>
 
     </body>
