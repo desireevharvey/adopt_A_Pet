@@ -2,7 +2,7 @@
 const mongoose = require("mongoose");
 
 // connect to MongoDB via mongoose
-const connectionString = "mongodb://localhost:27017/adopt-a-pet"
+const connectionString = process.env.MONGODBURI
 mongoose.connect(
     connectionString,
     { useNewUrlParser: true, useUnifiedTopology: true }
