@@ -4,38 +4,80 @@ body {
 
 
 .white-box {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.881);
     color: black;
-    width: 100%;
-    display: inline-flex;
     justify-content: center;
     align-items: center;
+    margin-top: 0.6250em;
+    margin-bottom: 0.7500em;
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 0.881);
+    border-width: 1em;
+    border-radius: 30px;
 }
 
 .db-object{
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    margin-left: 125px;    
+    margin-top: 5em;
+    margin-left: 6em;
 }
 
  .img-with-text {
-    text-align: left; 
+    text-align: center;
 }
     
 .img-with-text img {
-    display: inline-block;
-   
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #title {
     text-align: center;
+    margin-top: 1em;
 }
 
 
 .db-object a :hover {
     opacity: 0.8;
 }
+
+
+.white-box2 {
+    background-color: white;
+    color: black;
+    width: 40%;
+    display: block;
+    justify-content: center;
+    margin-top: 9em;
+    margin-left: 25em;
+    margin-bottom: 1em;
+}
+
+.btn {
+    background-color:#ddb370;
+    border: #ddb370;
+}
+
+.btn :hover {
+    background-color:rgba(138, 170, 177, 0.746);
+}
+
+a {
+    margin-left: 4em;
+    color: cadetblue;
+    text-decoration: underline overline #ddb370;
+    transition: background-color 2s ease-out 100ms
+}
+
+a:hover {
+    text-decoration: none;
+    background-color: #ddb370;
+    color:white;
+}
+
 
 
 /* Start https://www.cursors-4u.com */ * {cursor: url(https://cur.cursors-4u.net/nature/nat-8/nat738.cur), auto !important;} /* End https://www.cursors-4u.com */

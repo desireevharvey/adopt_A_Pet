@@ -4,10 +4,23 @@
     margin-top: 100px;
 }
 
-mark {
+a {
+    margin-left: 4em;
+    color: cadetblue;
+    text-decoration: underline overline #ddb370;
+    transition: background-color 2s ease-out 100ms
+}
+
+a:hover {
+    text-decoration: none;
+    background-color: #ddb370;
+    color:white;
+}
+
+/* mark {
     background-color:#ddb370;
     color: white;
-   }
+   } */
 
 .flex-container {
     display: flex;
@@ -52,7 +65,7 @@ mark {
 
 
     .white-box {
-        background-color: white;
+        background-color: rgba(255, 255, 255, 0.881);
         color: black;
         margin: 100px 200px 50px 200px;
     }

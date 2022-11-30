@@ -60,12 +60,9 @@ router.put('/:id', (req, res) => {
 
 // Create Route (POST/Create): This route receives the POST request sent from the new route above, parses it into a location object, creates the location object as a document in the locations collection, and redirects the user back to the root/home page
 router.post('/', (req, res) => {
-    if (req.body.visited) {
-        req.body.visited = true
-    } else {
-        req.body.visited = false
-    }
-    db.Cat.create(req.body, (err, cat) => {
+    console.log(req.body)
+    db.Cat.create(req.body, (err, cat) => { 
+        console.log(cat)
         res.redirect('/cats')
     })
 })

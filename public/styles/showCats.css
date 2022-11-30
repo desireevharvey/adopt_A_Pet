@@ -7,11 +7,15 @@ body {
 .white-box {
     background-color: white;
     color: black;
-    width: 40%;
+    width: 20em;
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    margin-left: 30%; 
+    margin-left: 35em; 
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 0.881);
+    border-width: 1em;
+    border-radius: 30px;
 }
 
 
@@ -26,11 +30,20 @@ body {
 }
 
 
-#title {
-        text-align: center;
-        margin-bottom: 30px;
-        margin-top: 50px;
+
+a {
+    margin-left: 4em;
+    color: cadetblue;
+    text-decoration: underline overline #ddb370;
+    transition: background-color 2s ease-out 100ms
 }
+
+a:hover {
+    text-decoration: none;
+    background-color: #ddb370;
+    color:white;
+}
+
 
 
 /* Start https://www.cursors-4u.com */ * {cursor: url(https://cur.cursors-4u.net/nature/nat-8/nat738.cur), auto !important;} /* End https://www.cursors-4u.com */
