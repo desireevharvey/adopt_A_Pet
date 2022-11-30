@@ -36,10 +36,10 @@
             </div>
             </div>
             <center>
-            <a href='/dogs/<%=dog._id%>/edit'><button>Edit</button></a>
+            <a href='/dogs/<%=dog._id%>/edit'><button class="edit btn btn-secondary">Edit</button></a>
 
             <form action="/dogs/<%= dog._id%>?_method=DELETE" method="POST">
-            <button type="submit" class="delete">Adopt</button>
+            <button type="submit" class="delete btn btn-secondary">Adopt</button>
             </center>
             </figure>
         

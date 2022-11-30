@@ -7,19 +7,21 @@
 </head>
 <body>
     <%- include ("./partials/nav.ejs") %>
+
+    <h6><a href="/cats">Back</a></h6>
     
     <div class="white-box2">
 
         <div class="col-md-6 offset-md-3 mt-5">
-             <h1>Cat Surrender Form</h1>
-             <form action="/cats/" method="POST" >
+             <h1>Edit</h1>
+             <form action="/cats/<%=cat.id%>?_method=PUT" method="POST">
                <div class="form-group">
                  <label for="exampleInputName">Name</label>
-                 <input type="text" name="name" class="form-control" id="exampleInputName" placeholder="Enter your cat's name" required="required">
+                 <input type="text" name="name" class="form-control" id="exampleInputName" placeholder="<%=cat.name%>" required="required">
                </div>
                <div class="form-group">
                 <label for="exampleInputBreed">Breed</label>
-                <input type="text" name="breed" class="form-control" id="exampleInputBreed" placeholder="Enter your cat's breed" required="required">
+                <input type="text" name="breed" class="form-control" id="exampleInputBreed" placeholder="<%=cat.breed%>" required="required">
               </div>
                <div class="form-group">
                  <label for="exampleFormControlSelect1">Gender</label>
